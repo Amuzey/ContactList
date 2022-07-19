@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tx4-XQ-LdV" kind="show" id="j7U-fn-xNI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,14 +34,30 @@
                             <outlet property="delegate" destination="IPc-q5-L3z" id="wf7-lX-aGx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="V5i-Fg-ib6"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.crop.circle" catalog="system" id="V5i-Fg-ib6"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="7aM-6N-arg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wk1-4M-Eh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="800" y="781"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
+        <scene sceneID="8MF-Kp-VvU">
+            <objects>
+                <viewController id="tx4-XQ-LdV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pde-ba-8go">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k4A-Mp-hkQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a0E-EY-MRz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nV-qH-xsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="1487"/>
+        </scene>
+        <!--Contacts-->
         <scene sceneID="Rd8-aC-eg7">
             <objects>
                 <tableViewController id="yoR-cb-2nH" sceneMemberID="viewController">
@@ -60,7 +80,7 @@
                             <outlet property="delegate" destination="yoR-cb-2nH" id="VNX-wn-7vt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="3Fo-Wa-3sj"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.crop.circle" catalog="system" id="3Fo-Wa-3sj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjB-RE-Qdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,6 +109,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="e5q-Er-XjP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2d-1Z-E5F">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -103,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
