@@ -15,7 +15,14 @@ struct Person {
     var phoneNumber: String
     
     var fullName: String {
-        name + surname
+        name + " " + surname
+    }
+    
+  static func getContactInfo() -> [Person] {
+        [
+            Person(name: "Aleksey", surname: "Ivanov", email: "idm.ru", phoneNumber: "898989"),
+            Person(name: "Anastasia", surname: "Shmeleva", email: "qweqo.com", phoneNumber: "908833")
+        ]
     }
 }
 
