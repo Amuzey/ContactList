@@ -23,6 +23,7 @@ class ContactListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
         let contact = contactList[indexPath.row]
+        
         var content = cell.defaultContentConfiguration()
         content.text = contact.fullName
         cell.contentConfiguration = content
@@ -32,6 +33,9 @@ class ContactListViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let contactVC = segue.destination as? ContactViewController else { return }
+//        contactVC.contact =
+        
     }
     
 }
