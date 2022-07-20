@@ -10,6 +10,7 @@ import UIKit
 class SecondContactListViewController: UITableViewController {
     
     private let contactsList = Person.getContactInfo()
+   
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
