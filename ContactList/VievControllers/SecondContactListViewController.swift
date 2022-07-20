@@ -9,12 +9,12 @@ import UIKit
 
 class SecondContactListViewController: UITableViewController {
     
-    private let contactsList = Person.getContactInfo()
-   
+    private let contactList = Person.getContactInfo()
+    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        contactsList.count
+        contactList.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,7 +23,7 @@ class SecondContactListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "phone", for: indexPath)
-        let contact = contactsList[indexPath.section]
+        let contact = contactList[indexPath.section]
         var content = cell.defaultContentConfiguration()
         
         if indexPath.row == 0 {
@@ -38,10 +38,8 @@ class SecondContactListViewController: UITableViewController {
         return cell
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let contact = contactsList[section]
+        let contact = contactList[section]
         return contact.fullName
     }
 }

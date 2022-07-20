@@ -13,7 +13,7 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var emailAdressLabel: UILabel!
     
     var contact: Person!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
