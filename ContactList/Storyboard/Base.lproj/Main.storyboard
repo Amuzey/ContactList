@@ -86,9 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact Info" id="Cd9-iJ-IAW"/>
                     <connections>
-                        <outlet property="emailAdress" destination="MSU-F7-XjU" id="4cs-DI-4Wc"/>
-                        <outlet property="navigationContactInfo" destination="Cd9-iJ-IAW" id="bQF-aA-8Jq"/>
-                        <outlet property="phoneNumber" destination="OT2-pW-ty5" id="6HK-D7-6zL"/>
+                        <outlet property="emailAdressLabel" destination="MSU-F7-XjU" id="4cs-DI-4Wc"/>
+                        <outlet property="phoneNumberLabel" destination="OT2-pW-ty5" id="6HK-D7-6zL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvA-vq-jJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

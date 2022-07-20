@@ -38,9 +38,6 @@ struct Person {
 }
 
 
-
-
-
 class DataStore {
     
     var name = [
@@ -78,7 +75,6 @@ class DataStore {
         "ieut@gmail.com",
         "3t@outlook.com",
         "4o2g@yandex.ru"
-        
     ]
     var phoneNumber = [
         "+7(343)891-3949",

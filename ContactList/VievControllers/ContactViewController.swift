@@ -9,17 +9,16 @@ import UIKit
 
 class ContactViewController: UIViewController {
     
-    @IBOutlet weak var phoneNumber: UILabel!
-    @IBOutlet weak var emailAdress: UILabel!
-    @IBOutlet weak var navigationContactInfo: UINavigationItem!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var emailAdressLabel: UILabel!
     
     var contact: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationContactInfo.title = contact.fullName
-        phoneNumber.text = "Phone: \(contact.phoneNumber)"
-        emailAdress.text = "Email: \(contact.email)"
+        navigationItem.title = contact.fullName
+        phoneNumberLabel.text = "Phone: \(contact.phoneNumber)"
+        emailAdressLabel.text = "Email: \(contact.email)"
     }
 }

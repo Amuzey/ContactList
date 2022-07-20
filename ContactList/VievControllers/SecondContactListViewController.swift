@@ -11,9 +11,6 @@ class SecondContactListViewController: UITableViewController {
     
     private let contactsList = Person.getContactInfo()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,13 +23,18 @@ class SecondContactListViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "secondContact", for: indexPath)
+        let number = tableView.dequeueReusableCell(withIdentifier: "secondContact", for: indexPath)
+        let email = tableView.dequeueReusableCell(withIdentifier: "secondContact", for: indexPath)
         let contact = contactsList[indexPath.row]
+        var contentNumber = number.defaultContentConfiguration()
+        var contentEmail = email.defaultContentConfiguration()
         
-        var content = cell.defaultContentConfiguration()
-        content.text = contact.phoneNumber
-        cell.contentConfiguration = content
-        return cell
+        contentNumber.text = contact.phoneNumber
+        contentEmail.text = contact.email
+        
+        number.contentConfiguration = contentNumber
+        email.contentConfiguration = contentEmail
+        return email
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let indexPath = tableView.indexPathForSelectedRow
