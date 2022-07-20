@@ -36,7 +36,5 @@ class FirstContactsListViewController: UITableViewController {
         guard let contactVC = segue.destination as? ContactViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         contactVC.contact = contactsList[indexPath.row]
-
     }
-
 }

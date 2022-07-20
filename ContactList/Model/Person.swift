@@ -18,18 +18,64 @@ struct Person {
         name + " " + surname
     }
     
-  static func getContactInfo() -> [Person] {
+    static func getContactInfo() -> [Person] {
         [
-            Person(name: "Aleksey", surname: "Ivanov", email: "idm.ru", phoneNumber: "898989"),
-            Person(name: "Anastasia", surname: "Shmeleva", email: "qweqo.com", phoneNumber: "908833")
+            
         ]
+        }
     }
 }
 
-//class dataStore {
-//    var name: [String]
-//    var surname: [String]
-//    var email: [String]
-//    var phoneNumber: [String]
-//
-//}
+class DataStore {
+    var name = [
+        "Oliver",
+        "Jack",
+        "Harry",
+        "Jacob",
+        "Charley",
+        "Thomas",
+        "George",
+        "Oscar",
+        "Anderson",
+        "Arhold"
+    ]
+    var surname = [
+        "Williams",
+        "Peters",
+        "Gibson",
+        "Martin",
+        "Jordan",
+        "Jackson",
+        "Grant",
+        "Davis",
+        "Collins",
+        "Bradley"
+    ]
+    var email = [
+        "8l0g@yandex.ru",
+        "1zx8@yandex.ru",
+        "weqwex@mail.ru",
+        "34ed@gmail.com",
+        "pexacl@mail.ru",
+        "7eo1@gmail.com",
+        "1wee@gmail.com",
+        "ieut@gmail.com",
+        "3t@outlook.com",
+        "4o2g@yandex.ru",
+        "5hspi3@mail.ru"
+    ]
+    var phoneNumber = [
+        "+7(343)891-3949",
+        "+7(343)832-4811",
+        "+7(343)393-7048",
+        "+7(343)595-3930",
+        "+7(343)211-2508",
+        "+7(343)409-2201",
+        "+7(343)943-0828",
+        "+7(343)238-1789",
+        "+7(343)003-5110",
+        "+7(343)198-3990"
+    ]
+    
+}
+
