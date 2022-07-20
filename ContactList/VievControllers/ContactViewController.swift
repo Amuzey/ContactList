@@ -11,14 +11,16 @@ class ContactViewController: UIViewController {
     
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var emailAdress: UILabel!
+    @IBOutlet weak var navigationContactInfo: UINavigationItem!
+    
     var contact: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        phoneNumber.text = contact.phoneNumber
-        emailAdress.text = contact.email
-        // Do any additional setup after loading the view.
+        
+        navigationContactInfo.title = contact.fullName
+        phoneNumber.text = "Phone: \(contact.phoneNumber)"
+        emailAdress.text = "Email: \(contact.email)"
     }
     
 

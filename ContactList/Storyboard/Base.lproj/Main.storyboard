@@ -11,7 +11,7 @@
         <!--Contacts-->
         <scene sceneID="gC7-9e-VzX">
             <objects>
-                <tableViewController id="IPc-q5-L3z" customClass="ContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="IPc-q5-L3z" customClass="FirstContactsListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Eql-Vq-uPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,8 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="KTQ-yT-dUm">
-                                <rect key="frame" x="16" y="160" width="382" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KTQ-yT-dUm">
+                                <rect key="frame" x="16" y="200" width="382" height="71"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OT2-pW-ty5">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -68,7 +68,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSU-F7-XjU">
-                                        <rect key="frame" x="0.0" y="77.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="382" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="xHx-NP-Rc0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KTQ-yT-dUm" firstAttribute="top" secondItem="xHx-NP-Rc0" secondAttribute="top" constant="20" id="FPx-qD-QWR"/>
+                            <constraint firstItem="KTQ-yT-dUm" firstAttribute="top" secondItem="xHx-NP-Rc0" secondAttribute="top" constant="60" id="FPx-qD-QWR"/>
                             <constraint firstItem="xHx-NP-Rc0" firstAttribute="trailing" secondItem="KTQ-yT-dUm" secondAttribute="trailing" constant="16" id="G7L-Al-bVz"/>
                             <constraint firstItem="KTQ-yT-dUm" firstAttribute="leading" secondItem="xHx-NP-Rc0" secondAttribute="leading" constant="16" id="oWA-KC-af4"/>
                         </constraints>
@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" title="Contact Info" id="Cd9-iJ-IAW"/>
                     <connections>
                         <outlet property="emailAdress" destination="MSU-F7-XjU" id="4cs-DI-4Wc"/>
+                        <outlet property="navigationContactInfo" destination="Cd9-iJ-IAW" id="bQF-aA-8Jq"/>
                         <outlet property="phoneNumber" destination="OT2-pW-ty5" id="6HK-D7-6zL"/>
                     </connections>
                 </viewController>
@@ -126,7 +127,7 @@
         <!--Navigation Controller-->
         <scene sceneID="w6h-of-3rX">
             <objects>
-                <navigationController id="U03-cW-m6w" sceneMemberID="viewController">
+                <navigationController id="U03-cW-m6w" customClass="NavigationController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="d7l-oX-Lyz">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -142,7 +143,7 @@
         <!--Persons List-->
         <scene sceneID="x0X-Ee-8rC">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fvR-0j-wsg" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fvR-0j-wsg" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Persons List" id="e5q-Er-XjP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2d-1Z-E5F">
