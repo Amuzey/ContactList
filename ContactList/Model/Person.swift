@@ -19,14 +19,30 @@ struct Person {
     }
     
     static func getContactInfo() -> [Person] {
-        [
+        let dataStore = DataStore()
+        var personList: [Person] = []
+        
+        for count in 0...9 {
             
-        ]
+            personList.append(
+                Person(
+                    name: dataStore.name.remove(at: Int.random(in: 0...9 - count)),
+                    surname: dataStore.surname.remove(at: Int.random(in: 0...9 - count)),
+                    email: dataStore.email.remove(at: Int.random(in: 0...9 - count)),
+                    phoneNumber: dataStore.phoneNumber.remove(at: Int.random(in: 0...9 - count))
+                )
+            )
         }
+        return personList
     }
 }
 
+
+
+
+
 class DataStore {
+    
     var name = [
         "Oliver",
         "Jack",
@@ -61,8 +77,8 @@ class DataStore {
         "1wee@gmail.com",
         "ieut@gmail.com",
         "3t@outlook.com",
-        "4o2g@yandex.ru",
-        "5hspi3@mail.ru"
+        "4o2g@yandex.ru"
+        
     ]
     var phoneNumber = [
         "+7(343)891-3949",
@@ -76,6 +92,5 @@ class DataStore {
         "+7(343)003-5110",
         "+7(343)198-3990"
     ]
-    
 }
 
