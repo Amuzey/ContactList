@@ -16,6 +16,8 @@
 		8AF58B0528869C56002C17A7 /* SecondContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF58B0428869C56002C17A7 /* SecondContactListViewController.swift */; };
 		8AF58B0728869C6F002C17A7 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF58B0628869C6F002C17A7 /* ContactViewController.swift */; };
 		8AF58B0E28869E7F002C17A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF58B0D28869E7F002C17A7 /* Person.swift */; };
+		8AF58B16288ACAF5002C17A7 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF58B15288ACAF5002C17A7 /* DataStore.swift */; };
+		8AF58B19288AD058002C17A7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF58B18288AD058002C17A7 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8AF58B0428869C56002C17A7 /* SecondContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContactListViewController.swift; sourceTree = "<group>"; };
 		8AF58B0628869C6F002C17A7 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		8AF58B0D28869E7F002C17A7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8AF58B15288ACAF5002C17A7 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		8AF58B18288AD058002C17A7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				8AF58B0828869D1C002C17A7 /* VievControllers */,
-				8AF58B0928869D2C002C17A7 /* Model */,
+				8AF58B0928869D2C002C17A7 /* Models */,
+				8AF58B17288ACAF9002C17A7 /* Services */,
 				8AF58B0A28869D39002C17A7 /* Storyboard */,
 				8AF58B0C28869D69002C17A7 /* Resources */,
 				8AF58B0B28869D52002C17A7 /* App */,
@@ -74,6 +79,7 @@
 		8AF58B0828869D1C002C17A7 /* VievControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AF58B18288AD058002C17A7 /* TabBarViewController.swift */,
 				8AF58B0228869BF6002C17A7 /* FirstContactsListViewController.swift */,
 				8AF58B0628869C6F002C17A7 /* ContactViewController.swift */,
 				8AF58B0428869C56002C17A7 /* SecondContactListViewController.swift */,
@@ -81,12 +87,12 @@
 			path = VievControllers;
 			sourceTree = "<group>";
 		};
-		8AF58B0928869D2C002C17A7 /* Model */ = {
+		8AF58B0928869D2C002C17A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8AF58B0D28869E7F002C17A7 /* Person.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8AF58B0A28869D39002C17A7 /* Storyboard */ = {
@@ -114,6 +120,14 @@
 				8AF58AF52886961C002C17A7 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8AF58B17288ACAF9002C17A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8AF58B15288ACAF5002C17A7 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF58B19288AD058002C17A7 /* TabBarViewController.swift in Sources */,
+				8AF58B16288ACAF5002C17A7 /* DataStore.swift in Sources */,
 				8AF58B0E28869E7F002C17A7 /* Person.swift in Sources */,
 				8AF58B0328869BF6002C17A7 /* FirstContactsListViewController.swift in Sources */,
 				8AF58B0528869C56002C17A7 /* SecondContactListViewController.swift in Sources */,

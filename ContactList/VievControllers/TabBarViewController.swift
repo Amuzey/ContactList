@@ -2,32 +2,26 @@
 //  TabBarViewController.swift
 //  ContactList
 //
-//  Created by Алексей on 19.07.2022.
+//  Created by Алексей on 22.07.2022.
 //
 
 import UIKit
 
 class TabBarViewController: UITabBarController {
     
-   private let contactsList = Person.getContactInfo()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    settingViewControllers()
     }
     
-
-   
-    // MARK: - Navigation
-
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if let firstVC = segue.destination as? FirstContactsListViewController {
-             firstVC.contactsList = contactsList
-             print(1)
-         } else if let secondVC = segue.destination as? SecondContactListViewController {
-             secondVC.contactsList = contactsList
-             print(2)
-         }
-     }
+    private func settingViewControllers() {
+        
+        guard let firstVC = viewControllers?.first as? FirstContactsListViewController else { return }
+        guard let secondVC = viewControllers?.last as? SecondContactListViewController else { return }
+        
+        let personsList = Person.getContactInfo()
+        firstVC.personsList = personsList
+        secondVC.personsList = personsList
+    }
 }
