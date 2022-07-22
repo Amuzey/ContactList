@@ -69,7 +69,7 @@
 				8AF58B0828869D1C002C17A7 /* VievControllers */,
 				8AF58B0928869D2C002C17A7 /* Models */,
 				8AF58B17288ACAF9002C17A7 /* Services */,
-				8AF58B0A28869D39002C17A7 /* Storyboard */,
+				8AF58B0A28869D39002C17A7 /* Storyboards */,
 				8AF58B0C28869D69002C17A7 /* Resources */,
 				8AF58B0B28869D52002C17A7 /* App */,
 			);
@@ -95,13 +95,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8AF58B0A28869D39002C17A7 /* Storyboard */ = {
+		8AF58B0A28869D39002C17A7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				8AF58AF228869619002C17A7 /* Main.storyboard */,
 				8AF58AF72886961C002C17A7 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboard;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		8AF58B0B28869D52002C17A7 /* App */ = {
